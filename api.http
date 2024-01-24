@@ -1,0 +1,31 @@
+### Recuperar todas las movies
+GET http://localhost:3000/movies
+
+### Recuperar una movie
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar movies por genero
+GET http://localhost:3000/movies?genre=action
+
+### Crear una movie POST
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "The Godfather",
+  "year": 1994,
+  "director": "Frank Darabont",
+  "duration": 142,
+  "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+  "genre": ["Drama"]
+}
+
+### Actualizar una movie PATCH
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "title": "The Godfather MOD",
+  "rate": 9.3,
+  "id": "123"
+}
